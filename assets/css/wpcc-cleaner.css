@@ -1,0 +1,252 @@
+#toplevel_page_cache-dashboard .wp-first-item{
+	display:none;
+}
+.wpcc-admin .wp-list-table .installed label, .wpcc-admin .wp-list-table .active label, .wpcc-admin .wp-list-table .disabled label{
+	cursor:revert;	
+} 
+.wpcc-admin .wp-list-table label.wpcc-uncheckeddropdown .wpcc-slider{
+	cursor:no-drop !important;	
+}
+.wpcc-admin .wp-list-table td {
+    padding: 15px 10px;
+}
+.wpcc-admin .wp-list-table .check-column {
+    vertical-align: middle !important;
+    padding-top: 5px !important;
+}
+.wpcc-admin .wpcc-top-bar{
+	display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    box-shadow: 0 8px 6px -6px #E4E4E5;
+    background-color: #F8F8F8;
+    margin-left: -16px;
+    margin-top: -1px;
+	margin-bottom: 25px;
+}
+.wpcc-admin .wpcc-top-left{
+	display:flex;
+	align-items: center;
+	margin: 0;	
+}
+.wpcc-admin .wpcc-top-left h1{
+	font-size: 24px;	
+}
+.wpcc-admin .wpcc-top-left li{
+	margin-right: 20px;	
+}
+.wpcc-admin .wpcc-top-left li a{
+	font-weight:600;
+	text-decoration:blink;
+	color:#000;	
+}
+.wpcc-admin .wpcc-top-left li.wpcc-active a{
+	font-weight:bold;	
+}
+.wpcc-admin .wpcc-top-right{
+			
+}
+.wpcc-admin .wpcc-button a{
+	background-color: #02AAF2;
+    color: #FFF;
+    padding: 13px 30px;
+    border: 0;
+	text-decoration: none;
+	cursor: pointer;
+    border-radius: 5px		
+}
+.wpcc-admin .wpcc-button a[disabled] {
+  opacity: .6;
+  cursor: no-drop;
+}
+.wpcc-admin .wpcc-button a.wpcc-small{
+	padding: 8px 15px 10px 15px;
+}
+.wpcc-admin .wpcc-button .not-installed a.wpcc-small[disabled] {
+  opacity: .8;
+  background-color:#D9D9D9;
+}
+.wpcc-admin .wpcc-button a.wpcc-small[disabled] {
+	opacity: 10;
+  background-color:#ccc;
+}
+.wpcc-admin .title {
+	margin-top: 0px;
+	font-size: 22px;		
+}
+.wpcc-admin p {
+    font-size: 18px;
+}
+.wpcc-admin .column-title{
+	min-width: 300px;
+}
+.wpcc-admin .column-clearcache{
+	min-width: 200px;
+}
+.wpcc-admin .wpcc-body-title{
+	font-size: 16px;
+}
+/*------------- Checked style -------------*/
+.wpcc-check {
+  position: relative;
+}
+
+.wpcc-check input {
+  display: none;
+}
+
+.wpcc-check input~.checkmark {
+  background: #EC625C;
+  width: 22px;
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  border-radius: 2px;
+  vertical-align:middle;
+  margin-right:10px;
+}
+
+.wpcc-check input~.uncheckmark {
+  background: #D9D9D9;
+  width: 22px;
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  border-radius: 2px;
+  vertical-align:middle;
+  margin-right:10px;
+}
+
+.wpcc-check input~.checkmark:after,
+.wpcc-check input~.checkmark:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  background: #fff;
+  left: 10px;
+  top: 3px;
+}
+
+.wpcc-check input~.checkmark:after {
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+
+.wpcc-check input~.checkmark:before {
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.wpcc-check input:checked~.checkmark {
+  background: #86C750;
+  width: 22px;
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  border-radius: 2px;
+}
+
+.wpcc-check input:checked~.checkmark:after {
+  display: none;
+}
+
+.wpcc-check input:checked~.checkmark:before {
+  background: none;
+  border: 2px solid #fff;
+  width: 4px;
+  top: 2px;
+  left: 8px;
+  border-top: 0;
+  border-left: 0;
+  height: 13px;
+  top: 2px;
+}
+/*-----------------------------------------*/
+/* The switch - the box around the slider */
+.wpcc-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.wpcc-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.not-installed .wpcc-slider {
+  background-color: #D9D9D9;
+    opacity: .8;
+}
+.wpcc-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 22px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.wpcc-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .wpcc-slider {
+  background-color: #2196F3;
+}
+
+input:focus + .wpcc-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .wpcc-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.wpcc-slider.round {
+  border-radius: 34px;
+}
+
+.wpcc-slider.round:before {
+  border-radius: 50%;
+}
+.wpcc_cache_response{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: gray;
+    height: 100%;
+    opacity: 0.6;
+	display: flex;
+	z-index: 9;
+    justify-content: center;
+    align-items: center;
+}
+.wpcc_success{
+	background: #86C750;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: white;
+}
